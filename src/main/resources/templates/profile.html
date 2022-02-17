@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MyProfile</title>
+    <style>
+        * {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for the submit/register button */
+.addbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.addbtn:hover {
+  opacity:1;
+}
+</style>
+</head>
+<body>
+<body>
+
+<!--    <div class="login-block">-->
+<!--        <h1>Update Details</h1>-->
+<!--        <label><b>UserName</b></label><br>-->
+<!--        <input type="text" placeholder="Enter Username" name="userName" th:value="${user.username}" readonly/>-->
+<!--        <label><b>Name</b></label>-->
+<!--        <input type="text" placeholder="Enter Name" name="name" th:value="${uer.name}"><br><br>-->
+<!--        <label><b>Password</b></label><br>-->
+<!--        <input type="password" placeholder="Enter Password" name="password" th:value="${user.password}" />-->
+<!--        &lt;!&ndash;        <label><b>Email</b></label><br>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <input type="email" placeholder="Email" name="email" th:value="${customer.email}" readonly/>&ndash;&gt;-->
+<!--        <label><b>Mobile Number</b></label><br>-->
+<!--        <input type="number" placeholder="Enter Mobile Number" name="phoneNumber" th:value="${user.phoneNumber}"/>-->
+<!--        <label><b>Address</b></label><br>-->
+<!--        <input type="text" placeholder="Enter Address" name="address" th:value="${user.address}">-->
+<!--        <button>Update</button>-->
+<!--        <button type="button" class="cancelButton" onclick="/">Cancel</button><br/><br/>-->
+<!--    </div>-->
+    <div class="container" style="margin-top: 5%;">
+
+        <div class="container col d-flex justify-content-center mt-4" style="margin-top: 5%;">
+            <div class="card" style="width:500px">
+                <img class="card-img-top" src="/images/profileBg.jpg" alt="Card image" style="width:100%">
+                <div class="card-img-overlay text-center mt-4 mb-2">
+                    <h3 class="card-title mb-2" style="margin-top: 4%; margin-bottom: 5%;"><b>Details of <span th:text="${user.name}"/></b></h3>
+                    <h5 class="card-text mb-2" style="margin-top: 5%; margin-bottom: 3%;"><b>Username:</b> <span th:text="${user.username}"/></h5>
+                    <h5 class="card-text mb-2" style="margin-top: 2%; margin-bottom: 3%;"><b>Name:</b> <span th:text="${user.name}"/></h5>
+                    <h5 class="card-text mb-2" style="margin-top: 2%; margin-bottom: 3%;"><b>Address:</b> <span th:text="${user.address}"/></h5>
+                    <h5 class="card-text mb-2" style="margin-top: 2%; margin-bottom: 3%;"><b>Phone Number:</b> <span th:text="${user.phoneNumber}"/></h5>
+                    <div class="mt-4 mb-2" style="margin-top: 6%;">
+                        <a th:href="@{/updateProfile}" class="btn btn-primary">Update</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</body>
+</html>
